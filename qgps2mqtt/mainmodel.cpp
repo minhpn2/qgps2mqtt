@@ -34,15 +34,6 @@ void mainModel::start()
     m_sender = new MqttSender(host, port);
     m_sender->setDefaultTopic(topic);
 
-//     Khai bao timer dung de goi chuong tinh lay data Gps
-//    timerRequestGetDataGps = new QTimer();
-
-//    timerRequestGetDataGps->setInterval(1000);
-
-//    connect(timerRequestGetDataGps, SIGNAL(timeout()),
-//            this, SLOT(CheckTimer()));
-
-//    timerRequestGetDataGps->start();
 }
 
 void mainModel::updatePosition(const QGeoPositionInfo &info)

@@ -1,4 +1,4 @@
-#include "configsetting.h"
+ #include "configsetting.h"
 #include <QMutex>
 #include <QDebug>
 #include "gps.h"

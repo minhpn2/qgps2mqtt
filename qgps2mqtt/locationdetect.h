@@ -6,6 +6,9 @@
 #include <QDebug>
 #include <QObject>
 #include <QTimer>
+
+#define SET_TIME_GETGPS 100 // 0.1s cap nhap mot lan
+
 /**
  * @brief The LocationDetect class
  *
@@ -30,9 +33,6 @@ private slots:
 
     // Chuong trinh kiem tra tin hieu Gps co duoc thay doi hay khong
     void positionUpdated(const QGeoPositionInfo &info);
-
-    // Chuong trinh cap nhap data Gps thong qua Gps
-    void timerRequestGetDataGps();
 
 private:
      gpsconfigure* _gpsconfigure;

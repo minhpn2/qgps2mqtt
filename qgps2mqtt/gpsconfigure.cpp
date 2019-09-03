@@ -220,6 +220,7 @@ void gpsconfigure::getDataGpsChanged()
                     info.setCoordinate(QGeoCoordinate(getGpsData->fix.latitude,
                                                       getGpsData->fix.longitude,
                                                       getGpsData->fix.altitude));
+                    info.setTimestamp(QDateTime(getGpsData->fix.time));
                     emit getDataGpsUpdated(info);
                 }
 
@@ -252,7 +253,7 @@ void gpsconfigure::getDataGpsChanged()
                                 QIODevice::WriteOnly);
             sendCommandAT.waitForStarted();
             sendCommandAT.execute("sudo rm /var/run/gpsd.sock");
-            sendCommandAT.execute("sudo systemctl stop gpsd.service");
+//            sendCommandAT.execute("sudo systemctl stop gpsd.service");
             sendCommandAT.waitForFinished();
             sendCommandAT.close();
 

@@ -58,10 +58,11 @@ signals:
     void getDataGpsUpdated(const QGeoPositionInfo &info);
 
 public slots:
-    // Chuong trinh nay dung de goi lay du lieu tu ben ngoai nhu MQTT, hay gi do, tuy ...
+    // Lay du lieu GPS va gui len
     void getDataGpsChanged();
 
 private slots:
+    // Kiem soat loi
     void InitializeGpsSignalWhenIssueHappened();
 
 private:

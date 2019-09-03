@@ -61,9 +61,4 @@ void GpsDataSend::positionUpdated(const QGeoPositionInfo &info)
     }
 }
 
-// test function
-void GpsDataSend::timerRequestGetDataGps()
-{
-    _gpsconfigure->getDataGpsChanged();
-}
 
